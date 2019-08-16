@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cs360.ryansantos.localcoffeeshop">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".TwitterAuthentication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="Find Us"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+
+        </activity>
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".CartActivity"
+            android:label="Cart"
+            android:parentActivityName=".MenuActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".OrderPlacedActivity"
+            android:label="Order Placed"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".TrackActivity"
+            android:label="Track Order"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="About"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ContactActivity"
+            android:label="Contact Us"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".RateActivity"
+            android:label="Rate Us"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".AccountActivity"
+            android:label="Account Info"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity
+            android:name=".ShareReviewActivity"
+            android:label="Share"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".TweetActivity"
+            android:label="Tweet"
+            android:parentActivityName=".ShareReviewActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".TwitterTimelineActivity"
+            android:label="Local Coffee Shop Tweets"
+            android:parentActivityName=".ContactActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+
+        <!-- Broadcast Receiver only for Native Twitter Composer to listen event -->
+        <receiver
+            android:name=".TwitterReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.twitter.sdk.android.tweetcomposer.UPLOAD_SUCCESS" />
+                <action android:name="com.twitter.sdk.android.tweetcomposer.UPLOAD_FAILURE" />
+                <action android:name="com.twitter.sdk.android.tweetcomposer.TWEET_COMPOSE_CANCEL" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+
+</manifest>

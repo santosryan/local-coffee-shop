@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#aaaaaa"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="24dp"
+        android:paddingRight="24dp">
+
+        <!--- Name and Icon -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/local_coffee_shop"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/local_coffee_shop"
+                android:src="@drawable/lcs_512x512" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/menuImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:paddingRight="-100dp"
+                app:srcCompat="@drawable/icon_coffee" />
+
+            <TextView
+                android:id="@+id/menuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="Menu"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:onClick="onClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/orderImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:paddingRight="-100dp"
+                app:srcCompat="@drawable/icon_hourglass" />
+
+            <TextView
+                android:id="@+id/orderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Track"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:onClick="onClick"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/aboutImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:paddingRight="-100dp"
+                app:srcCompat="@drawable/icon_info_circle" />
+
+            <TextView
+                android:id="@+id/aboutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="@string/about"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:onClick="onClick"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/contactImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:paddingRight="-100dp"
+                app:srcCompat="@drawable/icon_phone_square" />
+
+            <TextView
+                android:id="@+id/contactText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Contact"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:onClick="onClick"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/rateImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:paddingRight="-100dp"
+                app:srcCompat="@drawable/icon_thumbs_up" />
+
+            <TextView
+                android:id="@+id/rateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Rate Us"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:onClick="onClick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/findImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:paddingRight="-100dp"
+                app:srcCompat="@drawable/icon_map" />
+
+            <TextView
+                android:id="@+id/findText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Find Us"
+                android:onClick="onClick"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/accountImage"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="-210dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/user_icon" />
+
+            <TextView
+                android:id="@+id/accountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-280dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Account"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:onClick="onClick"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
