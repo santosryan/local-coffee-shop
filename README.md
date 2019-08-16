@@ -34,3 +34,9 @@ Allows the user to rate their experience/order. The user can upload a photo of t
 ### Find Us
 
 Shows location of the business in the application.
+
+<br />
+
+## Enhancement Changes
+
+To enhance the mobile application, changes were made to the application in order to complete key features that were not completed during the original course. The cart and order tracking features were added as enhancements to complete the project. 
